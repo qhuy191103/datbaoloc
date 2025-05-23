@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, MapPin, Home, Users, Star, Phone, Mail, ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
+import { Search, MapPin, Home, Star, Phone, Mail, ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
