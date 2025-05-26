@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, MapPin, Home, Star, Phone, Mail, ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
+import { Search, Star, ArrowRight, CheckCircle, TrendingUp, Shield } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -397,13 +397,8 @@ function App() {
               </div>
             </div>
           </SwiperSlide>
-
-
         ))}
       </Swiper>
-
-
-
 
       {/* Services */}
       <section id="services" className="py-20">
@@ -579,26 +574,6 @@ function App() {
       </section>
 
 
-      {/* <section className="py-20 bg-blue-950">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sẵn Sàng Tìm Ngôi Nhà Mơ Ước?
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Hãy để chúng tôi giúp bạn tìm được bất động sản hoàn hảo. Liên hệ ngay để được tư vấn miễn phí!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 font-medium text-lg flex items-center justify-center space-x-2">
-              <Phone className="h-5 w-5" />
-              <span>Gọi ngay: 0123-456-789</span>
-            </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 font-medium text-lg flex items-center justify-center space-x-2">
-              <ArrowRight className="h-5 w-5" />
-              <span>Đăng ký tư vấn</span>
-            </button>
-          </div>
-        </div>
-      </section> */}
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
