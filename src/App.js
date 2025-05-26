@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Search, MapPin, Home, Star, Phone, Mail, ArrowRight, CheckCircle, TrendingUp, Shield, Award } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay } from "swiper/modules";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,8 +13,8 @@ function App() {
 
   const heroSlides = [
     {
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80",
-      title: "Tìm Ngôi Nhà Mơ Ước Của Bạn",
+      image: "https://aqland.vn/wp-content/uploads/2024/09/hinh-anh-thuc-te-xay-dung-sun-valley-bao-loc-2023-4.jpg",
+      title: "Tìm Ngôi Nhà Mơ Ước",
       subtitle: "Khám phá hàng nghìn bất động sản cao cấp"
     },
     {
@@ -26,38 +32,56 @@ function App() {
   const properties = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "12.5 tỷ",
-      title: "Villa Sang Trọng Quận 2",
-      location: "Thủ Đức, TP.HCM",
-      beds: 4,
-      baths: 3,
-      area: "250m²",
-      type: "hot"
+      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Sun Valley Coffee",
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "8.2 tỷ",
-      title: "Căn Hộ Penthouse View Sông",
-      location: "Quận 1, TP.HCM",
-      beds: 3,
-      baths: 2,
-      area: "180m²",
-      type: "new"
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Hồ cánh bướm",
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "6.8 tỷ",
-      title: "Nhà Phố Hiện Đại Quận 7",
-      location: "Quận 7, TP.HCM",
-      beds: 3,
-      baths: 3,
-      area: "120m²",
-      type: "featured"
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Club house - Sky bar",
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Hồ Chanson",
+    },
+    {
+      id: 5,
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Khu vườn Yoga",
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1594484208280-efa00f96fc21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Tuyến phố Shophouse",
+    },
+    {
+      id: 7,
+      image: "https://images.unsplash.com/photo-1596276020587-8044fe049813?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Khu vui chơi trẻ em",
+    },
+    {
+      id: 8,
+      image: "https://images.unsplash.com/photo-1560749003-f4b1e17e2dff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Nông trại Organic",
+    },
+    {
+      id: 9,
+      image: "https://images.unsplash.com/photo-1587162146766-e06b1189b907?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Công viên mê cung Pisani",
+    },
+    {
+      id: 10,
+      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Sky Central Park - Babylon Garden",
     }
   ];
+
 
   const testimonials = [
     {
@@ -82,6 +106,36 @@ function App() {
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
     }
   ];
+  const projectSlides = [
+    {
+      title: "GIAO LỘ THỊNH VƯỢNG MỘT BƯỚC CHÂN NGÀN TIỆN ÍCH",
+      description:
+        "Nằm giữa 3 trục đường chính là Tản Đà – Lý Thường Kiệt – cao tốc Dầu Giây – Liên Khương nên việc di chuyển đến các nơi là vô cùng thuận tiện. Vị trí này vừa giúp cư dân dễ dàng tiếp cận các địa điểm trung tâm lại vừa là vị trí dễ tiếp cận đối với những người di chuyển từ TP. Hồ Chí Minh và các tỉnh thành khác đến với Sun Valley..",
+      features: [
+
+        "Thiết kế hiện đại, tối ưu không gian",
+        "Tiện ích nội khu: hồ bơi, gym, công viên, trung tâm thương mại",
+      ],
+      image:
+        "https://sunvalley.vn/wp-content/uploads/2024/08/Ban-do-vi-tri-va-cao-toc@4x-2048x1575.png.webp",
+    },
+    {
+      title: "Từ Sun Valley cũng dễ dàng di chuyển đến các địa điểm như:",
+      description:
+        "Các điểm tham quan du lịch nổi tiếng: thác ĐamB’ri, tu viện Bát Nhã, đồi chè Tâm Châu,…",
+      features: [
+        "Các điểm tham quan du lịch nổi tiếng: thác ĐamB’ri, tu viện Bát Nhã, đồi chè Tâm Châu,…",
+        "Trung tâm thành phố Bảo Lộc: đơn vị hành chính, các dịch vụ vui chơi, ăn uống, cửa hàng,…",
+        "Các huyện, thành phố, tỉnh thành lân cận: Đà Lạt, Nha Trang, Phan Thiết, TP. Hồ Chí Minh.",
+      ],
+      image:
+        "https://sunvalley.vn/wp-content/uploads/2024/08/18170306-9-du-an-sun-valley-bao-loc.jpeg",
+
+
+    },
+
+  ];
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -109,24 +163,20 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
+      <header className="fixed top-0 w-full bg-transparent backdrop-blur-md shadow-lg z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Home className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Delta Realty
-              </span>
+
+              <img src="https://sunvalley.vn/wp-content/uploads/2018/12/sun-valley.png" alt="Mô tả ảnh" className="w-30 h-20 object-cover rounded-md" />
             </div>
 
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Trang chủ</a>
-              <a href="#properties" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Bất động sản</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Dịch vụ</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Về chúng tôi</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Liên hệ</a>
+              <a href="#home" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Trang chủ</a>
+              <a href="#properties" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Bất động sản</a>
+              <a href="#services" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Dịch vụ</a>
+              {/* <a href="#about" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Về chúng tôi</a> */}
+              <a href="#contact" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Tổng quan dự án</a>
             </nav>
           </div>
         </div>
@@ -134,6 +184,7 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen overflow-hidden">
+        {/* Background slides */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
             <div
@@ -151,53 +202,73 @@ function App() {
           ))}
         </div>
 
-        <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="block transform animate-pulse">
-                {heroSlides[currentSlide].title}
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              {heroSlides[currentSlide].subtitle}
-            </p>
+        {/* Content */}
+        <div className="relative z-10 h-full">
+          <div className="h-full flex flex-col justify-center items-center px-4">
+            {/* Title and subtitle */}
+            <div className="text-center text-white mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="block">
+                  {heroSlides[currentSlide].title}
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90">
+                {heroSlides[currentSlide].subtitle}
+              </p>
+            </div>
 
-            {/* Search Bar */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="relative">
-                  <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Vị trí"
-                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
+            {/* Search Bar - Now fixed position */}
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Họ và tên"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      type="tel"
+                      placeholder="Số điện thoại"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      placeholder="Ghi chú"
+                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 h-[42px] resize-none"
+                    ></input>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 font-medium">
+                      <ArrowRight className="h-5 w-5" />
+                      <span>Gửi thông tin</span>
+                    </button>
+                  </div>
                 </div>
-                <select className="px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
-                  <option>Loại BDS</option>
-                  <option>Căn hộ</option>
-                  <option>Nhà phố</option>
-                  <option>Villa</option>
-                </select>
-                <select className="px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
-                  <option>Khoảng giá</option>
-                  <option>Dưới 5 tỷ</option>
-                  <option>5-10 tỷ</option>
-                  <option>Trên 10 tỷ</option>
-                </select>
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 font-medium">
-                  <Search className="h-5 w-5" />
-                  <span>Tìm kiếm</span>
-                </button>
               </div>
             </div>
 
-            <div className="flex justify-center space-x-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-medium text-lg">
+            {/* Action Buttons */}
+            <div className="mt-8 flex justify-center space-x-4">
+              <button
+                className="px-8 py-4 bg-gradient-to-r from-blue-950 to-blue-900 text-white rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-medium text-lg"
+                onClick={() => window.location.href = "https://view360.flyingcam-vietnam.com/Project2021/SunValleyGd2/"}
+              >
                 Khám phá ngay
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-lg">
-                Xem video
               </button>
             </div>
           </div>
@@ -219,24 +290,24 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-blue-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-yellow-300">
             <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">5000+</div>
-              <div className="text-lg opacity-90">Bất động sản</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">45 ha</div>
+              <div className="text-lg opacity-90">Quy mô dự án</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">1200+</div>
-              <div className="text-lg opacity-90">Khách hàng hài lòng</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">900 sản phẩm</div>
+              <div className="text-lg opacity-90">Đất nền - shophouse - biệt thự vườn</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-              <div className="text-lg opacity-90">Năm kinh nghiệm</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">45%</div>
+              <div className="text-lg opacity-90">Mật độ xây dựng</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
-              <div className="text-lg opacity-90">Tỷ lệ thành công</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">7 phân khu</div>
+              <div className="text-lg opacity-90">Đa dạng chủ đề thiết kế</div>
             </div>
           </div>
         </div>
@@ -247,14 +318,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Bất Động Sản Nổi Bật
+              Tiện ích nội khu
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Khám phá những căn hộ, nhà phố và villa cao cấp nhất với vị trí đắc địa
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Tận hưởng không gian sống đẳng cấp với hệ thống tiện ích nội khu đa dạng và đẳng cấp
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-7">
             {properties.map((property, index) => (
               <div
                 key={property.id}
@@ -269,13 +340,6 @@ function App() {
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${property.type === 'hot' ? 'bg-red-500 text-white' :
-                      property.type === 'new' ? 'bg-green-500 text-white' :
-                        'bg-blue-500 text-white'
-                      }`}>
-                      {property.type === 'hot' ? 'Hot' :
-                        property.type === 'new' ? 'Mới' : 'Nổi bật'}
-                    </span>
                   </div>
                   <div className="absolute top-4 right-4">
                     <button className="w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
@@ -283,50 +347,63 @@ function App() {
                     </button>
                   </div>
                 </div>
-
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-gray-900 leading-tight">
+                    <h2 className="text-xl font-bold text-gray-900 leading-tight">
                       {property.title}
-                    </h3>
-                    <span className="text-2xl font-bold text-blue-600">
-                      {property.price}
-                    </span>
+                    </h2>
                   </div>
-
-                  <div className="flex items-center text-gray-600 mb-4">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    <span className="text-sm">{property.location}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
-                    <div className="flex items-center">
-                      <Home className="h-4 w-4 mr-1" />
-                      <span>{property.beds} phòng ngủ</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span>{property.baths} phòng tắm</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span>{property.area}</span>
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium">
-                    Xem chi tiết
-                  </button>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <button className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-medium text-lg">
-              Xem tất cả bất động sản
-            </button>
-          </div>
         </div>
       </section>
+      {/* hahaha */}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        spaceBetween={50}
+        slidesPerView={1}
+        className="w-full"
+        loop={true}
+      >
+        {projectSlides.map((project, index) => (
+          <SwiperSlide key={index}>
+            <div className="px-6 lg:px-16 min-h-[600px] flex items-center">
+              <div className="grid grid-cols-[1fr_2fr] gap-12 items-center w-full">
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-800 mb-4">{project.title}</h3>
+                  <p className="text-gray-600 text-lg mb-6">{project.description}</p>
+                  <ul className="space-y-4">
+                    {project.features.map((feature, i) => (
+                      <li key={i} className="flex items-start space-x-3">
+                        <CheckCircle className="text-green-500 mt-1" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="overflow-hidden rounded-3xl shadow-xl">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-[550px] object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
+                  />
+                </div>
+
+              </div>
+            </div>
+          </SwiperSlide>
+
+
+        ))}
+      </Swiper>
+
+
+
 
       {/* Services */}
       <section id="services" className="py-20">
@@ -336,7 +413,7 @@ function App() {
               Dịch Vụ Của Chúng Tôi
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Đội ngũ chuyên gia giàu kinh nghiệm sẵn sàng hỗ trợ bạn trong mọi giao dịch bất động sản
+              Đội ngũ chuyên gia giàu kinh nghiệm luôn sẵn sàng hỗ trợ bạn trong mọi giao dịch bất động sản tại dự án Sun Valley, đảm bảo quá trình đầu tư, mua bán diễn ra thuận lợi, minh bạch và hiệu quả nhất.
             </p>
           </div>
 
@@ -377,8 +454,10 @@ function App() {
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            {/* Nội dung bên trái: 5/12 */}
+            <div className="lg:col-span-5">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Tại Sao Chọn Chúng Tôi?
               </h2>
@@ -413,25 +492,21 @@ function App() {
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Delta Realty"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <Award className="h-12 w-12 text-yellow-500" />
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">Top 1</div>
-                    <div className="text-sm text-gray-600">Công ty BDS uy tín</div>
-                  </div>
-                </div>
+            {/* Ảnh bên phải: 7/12 */}
+            <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-3xl shadow-2xl">
+                <img
+                  src="https://khaihungcorp.com/wp-content/uploads/2023/03/PDH01491-1.jpg"
+                  alt="Delta Realty"
+                  className="w-full h-[500px] object-cover object-center transition-transform duration-500 hover:scale-105"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Testimonials */}
       <section className="py-20">
@@ -474,7 +549,37 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+
+      {/* Contact */}
+      <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Tiêu đề */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Trải Nghiệm Dự Án Bằng Công Nghệ 3D
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Khám phá toàn cảnh không gian sống hiện đại của dự án thông qua tour 360° thực tế ảo sống động.
+            </p>
+          </div>
+
+          {/* Iframe 3D */}
+          <div className="relative rounded-3xl shadow-2xl overflow-hidden border-8 border-white">
+            <div className="absolute inset-0 bg-black/20 z-10"></div>
+            <iframe
+              src="https://view360.flyingcam-vietnam.com/Project2021/SunValleyGd2/"
+              title="Sun Valley 3D Tour"
+              frameBorder="0"
+              allowFullScreen
+              className="w-full h-[600px] sm:h-[700px] md:h-[800px] relative z-20"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+
+      {/* <section className="py-20 bg-blue-950">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Sẵn Sàng Tìm Ngôi Nhà Mơ Ước?
@@ -493,146 +598,14 @@ function App() {
             </button>
           </div>
         </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Liên Hệ Với Chúng Tôi
-            </h2>
-            <p className="text-xl text-gray-600">
-              Hãy để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí trong 24h
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Gửi tin nhắn</h3>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Họ tên</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Nhập họ tên của bạn"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Số điện thoại</label>
-                      <input
-                        type="tel"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Nhập số điện thoại"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="Nhập email của bạn"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Loại bất động sản quan tâm</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
-                      <option>Chọn loại bất động sản</option>
-                      <option>Căn hộ chung cư</option>
-                      <option>Nhà phố</option>
-                      <option>Villa</option>
-                      <option>Đất nền</option>
-                      <option>Văn phòng</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Nội dung</label>
-                    <textarea
-                      rows="4"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="Mô tả nhu cầu của bạn..."
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium text-lg"
-                  >
-                    Gửi thông tin
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-white p-6 rounded-2xl shadow-lg flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Hotline</h4>
-                  <p className="text-gray-600">0123-456-789</p>
-                  <p className="text-gray-600">0987-654-321</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Email</h4>
-                  <p className="text-gray-600">info@realestatepro.vn</p>
-                  <p className="text-gray-600">support@realestatepro.vn</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg flex items-start space-x-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-purple-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Địa chỉ</h4>
-                  <p className="text-gray-600">16 Bát Nàn</p>
-                  <p className="text-gray-600">TP. Thủ Đức, Việt Nam</p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-2xl text-white">
-                <h4 className="text-lg font-semibold mb-4">Giờ làm việc</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Thứ 2 - Thứ 6:</span>
-                    <span>8:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Thứ 7:</span>
-                    <span>8:00 - 17:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Chủ nhật:</span>
-                    <span>9:00 - 16:00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </section> */}
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Home className="h-6 w-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">Delta Realty</span>
+                <img src="https://sunvalley.vn/wp-content/uploads/2018/12/sun-valley.png" alt="Mô tả ảnh" className="w-30 h-20 object-cover rounded-md" />
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
                 Đối tác tin cậy trong mọi giao dịch bất động sản. Chúng tôi cam kết mang đến dịch vụ tốt nhất.
@@ -687,7 +660,7 @@ function App() {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
-                © 2024 Delta Realty. Tất cả quyền được bảo lưu.
+                © 2025 Delta Realty. Tất cả quyền được bảo lưu.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Chính sách bảo mật</a>
@@ -702,7 +675,7 @@ function App() {
       {/* Back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-800 to-purple-800 text-orange-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
       >
         <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </button>
