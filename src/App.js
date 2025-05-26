@@ -6,6 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay } from "swiper/modules";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -136,6 +139,9 @@ function App() {
 
   ];
 
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -175,7 +181,6 @@ function App() {
               <a href="#home" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Trang chủ</a>
               <a href="#properties" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Bất động sản</a>
               <a href="#services" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Dịch vụ</a>
-              {/* <a href="#about" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Về chúng tôi</a> */}
               <a href="#contact" className="text-orange-200 hover:text-blue-600 transition-colors font-medium">Tổng quan dự án</a>
             </nav>
           </div>
@@ -183,7 +188,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen overflow-hidden">
+      <section id="home" className="relative h-screen overflow-hidden pt-28">
         {/* Background slides */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
@@ -207,12 +212,12 @@ function App() {
           <div className="h-full flex flex-col justify-center items-center px-4">
             {/* Title and subtitle */}
             <div className="text-center text-white mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-5xl font-bold mb-6 leading-tight">
                 <span className="block">
                   {heroSlides[currentSlide].title}
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl opacity-90">
+              <p className="text-xl md:text-1xl opacity-90">
                 {heroSlides[currentSlide].subtitle}
               </p>
             </div>
@@ -261,16 +266,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="mt-8 flex justify-center space-x-4">
-              <button
-                className="px-8 py-4 bg-gradient-to-r from-blue-950 to-blue-900 text-white rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-medium text-lg"
-                onClick={() => window.location.href = "https://view360.flyingcam-vietnam.com/Project2021/SunValleyGd2/"}
-              >
-                Khám phá ngay
-              </button>
-            </div>
           </div>
         </div>
 
@@ -291,26 +286,28 @@ function App() {
 
       {/* Stats Section */}
       <section className="py-20 bg-blue-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-yellow-300">
-            <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">45 ha</div>
-              <div className="text-lg opacity-90">Quy mô dự án</div>
-            </div>
-            <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">900 sản phẩm</div>
-              <div className="text-lg opacity-90">Đất nền - shophouse - biệt thự vườn</div>
-            </div>
-            <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">45%</div>
-              <div className="text-lg opacity-90">Mật độ xây dựng</div>
-            </div>
-            <div className="transform hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl md:text-5xl font-bold mb-2">7 phân khu</div>
-              <div className="text-lg opacity-90">Đa dạng chủ đề thiết kế</div>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-yellow-300">
+          <div className="transform hover:scale-110 transition-transform duration-300" data-aos="fade-up">
+            <div className="text-4xl md:text-5xl font-bold mb-2">45 ha</div>
+            <div className="text-lg opacity-90">Quy mô dự án</div>
+          </div>
+
+          <div className="transform hover:scale-110 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div className="text-4xl md:text-5xl font-bold mb-2">900 sản phẩm</div>
+            <div className="text-lg opacity-90">Đất nền - shophouse - biệt thự vườn</div>
+          </div>
+
+          <div className="transform hover:scale-110 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div className="text-4xl md:text-5xl font-bold mb-2">45%</div>
+            <div className="text-lg opacity-90">Mật độ xây dựng</div>
+          </div>
+
+          <div className="transform hover:scale-110 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div className="text-4xl md:text-5xl font-bold mb-2">7 phân khu</div>
+            <div className="text-lg opacity-90">Đa dạng chủ đề thiết kế</div>
           </div>
         </div>
+
       </section>
 
       {/* Featured Properties */}
@@ -329,9 +326,10 @@ function App() {
             {properties.map((property, index) => (
               <div
                 key={property.id}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-500 ${isVisible[`property-${index}`] ? 'animate-fade-in-up' : 'opacity-0'
-                  }`}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-500"
                 id={`property-${index}`}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div className="relative">
                   <img
@@ -339,8 +337,7 @@ function App() {
                     alt={property.title}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 left-4">
-                  </div>
+                  <div className="absolute top-4 left-4" />
                   <div className="absolute top-4 right-4">
                     <button className="w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
                       <Star className="h-5 w-5 text-gray-600" />
@@ -359,24 +356,36 @@ function App() {
           </div>
         </div>
       </section>
+
       {/* hahaha */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 7000, disableOnInteraction: false }}
         spaceBetween={50}
         slidesPerView={1}
         className="w-full"
         loop={true}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
       >
         {projectSlides.map((project, index) => (
           <SwiperSlide key={index}>
             <div className="px-6 lg:px-16 min-h-[600px] flex items-center">
               <div className="grid grid-cols-[1fr_2fr] gap-12 items-center w-full">
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4">{project.title}</h3>
-                  <p className="text-gray-600 text-lg mb-6">{project.description}</p>
+
+                {/* Bên trái: Nội dung */}
+                <div
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                >
+                  <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg mb-6">
+                    {project.description}
+                  </p>
                   <ul className="space-y-4">
                     {project.features.map((feature, i) => (
                       <li key={i} className="flex items-start space-x-3">
@@ -386,7 +395,13 @@ function App() {
                     ))}
                   </ul>
                 </div>
-                <div className="overflow-hidden rounded-3xl shadow-xl">
+
+                {/* Bên phải: Hình ảnh */}
+                <div
+                  className="overflow-hidden rounded-3xl shadow-xl"
+                  data-aos="zoom-in-left"
+                  data-aos-delay="400"
+                >
                   <img
                     src={project.image}
                     alt={project.title}
@@ -404,26 +419,41 @@ function App() {
       <section id="services" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              data-aos="fade-up"
+            >
               Dịch Vụ Của Chúng Tôi
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Đội ngũ chuyên gia giàu kinh nghiệm luôn sẵn sàng hỗ trợ bạn trong mọi giao dịch bất động sản tại dự án Sun Valley, đảm bảo quá trình đầu tư, mua bán diễn ra thuận lợi, minh bạch và hiệu quả nhất.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <div
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tìm kiếm BDS</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Tìm kiếm BĐS</h3>
               <p className="text-gray-600 leading-relaxed">
                 Hệ thống tìm kiếm thông minh giúp bạn tìm được bất động sản phù hợp nhất với nhu cầu và ngân sách.
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <div
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="h-10 w-10 text-white" />
               </div>
@@ -433,7 +463,11 @@ function App() {
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <div
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
               <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-10 w-10 text-white" />
               </div>
