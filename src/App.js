@@ -117,7 +117,7 @@ function App() {
                 <Home className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                RealEstate Pro
+                Delta Realty
               </span>
             </div>
 
@@ -128,15 +128,6 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Về chúng tôi</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Liên hệ</a>
             </nav>
-
-            <div className="flex items-center space-x-4">
-              <button className="hidden md:block px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-all duration-300 font-medium">
-                Đăng nhập
-              </button>
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-medium">
-                Đăng ký
-              </button>
-            </div>
           </div>
         </div>
       </header>
@@ -425,7 +416,7 @@ function App() {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Real estate team"
+                alt="Delta Realty"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
@@ -605,8 +596,8 @@ function App() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">Địa chỉ</h4>
-                  <p className="text-gray-600">123 Nguyễn Huệ, Quận 1</p>
-                  <p className="text-gray-600">TP. Hồ Chí Minh, Việt Nam</p>
+                  <p className="text-gray-600">16 Bát Nàn</p>
+                  <p className="text-gray-600">TP. Thủ Đức, Việt Nam</p>
                 </div>
               </div>
 
@@ -641,7 +632,7 @@ function App() {
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Home className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold">RealEstate Pro</span>
+                <span className="text-2xl font-bold">Delta Realty</span>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
                 Đối tác tin cậy trong mọi giao dịch bất động sản. Chúng tôi cam kết mang đến dịch vụ tốt nhất.
@@ -696,7 +687,7 @@ function App() {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
-                © 2024 RealEstate Pro. Tất cả quyền được bảo lưu.
+                © 2024 Delta Realty. Tất cả quyền được bảo lưu.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Chính sách bảo mật</a>
