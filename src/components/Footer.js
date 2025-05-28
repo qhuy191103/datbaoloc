@@ -29,10 +29,7 @@ function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-4 mb-8">
-            <div className="flex items-center space-x-3 text-gray-300">
-              <div className="h-5 w-5 bg-blue-400 rounded-sm flex items-center justify-center text-xs font-bold">📞</div>
-              <span>0123 456 789</span>
-            </div>
+
             <div className="flex items-center space-x-3 text-gray-300">
               <Mail className="h-5 w-5 text-blue-400" />
               <span>info@sunvalley.vn</span>
