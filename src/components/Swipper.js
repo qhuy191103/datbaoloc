@@ -1,0 +1,95 @@
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay } from "swiper/modules";
+import { CheckCircle } from 'lucide-react';
+
+const projectSlides = [
+  {
+    title: "GIAO LỘ THỊNH VƯỢNG MỘT BƯỚC CHÂN NGÀN TIỆN ÍCH",
+    description:
+      "Nằm giữa 3 trục đường chính là Tản Đà – Lý Thường Kiệt – cao tốc Dầu Giây – Liên Khương nên việc di chuyển đến các nơi là vô cùng thuận tiện. Vị trí này vừa giúp cư dân dễ dàng tiếp cận các địa điểm trung tâm lại vừa là vị trí dễ tiếp cận đối với những người di chuyển từ TP. Hồ Chí Minh và các tỉnh thành khác đến với Sun Valley..",
+    features: [
+
+      "Thiết kế hiện đại, tối ưu không gian",
+      "Tiện ích nội khu: hồ bơi, gym, công viên, trung tâm thương mại",
+    ],
+    image:
+      "https://sunvalley.vn/wp-content/uploads/2024/08/Ban-do-vi-tri-va-cao-toc@4x-2048x1575.png.webp",
+  },
+  {
+    title: "Từ Sun Valley cũng dễ dàng di chuyển đến các địa điểm như:",
+    description:
+      "Các điểm tham quan du lịch nổi tiếng: thác ĐamB’ri, tu viện Bát Nhã, đồi chè Tâm Châu,…",
+    features: [
+      "Các điểm tham quan du lịch nổi tiếng: thác ĐamB’ri, tu viện Bát Nhã, đồi chè Tâm Châu,…",
+      "Trung tâm thành phố Bảo Lộc: đơn vị hành chính, các dịch vụ vui chơi, ăn uống, cửa hàng,…",
+      "Các huyện, thành phố, tỉnh thành lân cận: Đà Lạt, Nha Trang, Phan Thiết, TP. Hồ Chí Minh.",
+    ],
+    image:
+      "https://sunvalley.vn/wp-content/uploads/2024/08/18170306-9-du-an-sun-valley-bao-loc.jpeg",
+
+
+  },
+]
+
+function Swipper() {
+  return (<Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    navigation
+    pagination={{ clickable: true }}
+    autoplay={{ delay: 7000, disableOnInteraction: false }}
+    spaceBetween={50}
+    slidesPerView={1}
+    className="w-full"
+    loop={true}
+    effect="fade"
+    fadeEffect={{ crossFade: true }}
+  >
+    {projectSlides.map((project, index) => (
+      <SwiperSlide key={index}>
+        <div className="px-6 lg:px-16 min-h-[600px] flex items-center">
+          <div className="grid grid-cols-[1fr_2fr] gap-12 items-center w-full">
+
+            {/* Bên trái: Nội dung */}
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 text-lg mb-6">
+                {project.description}
+              </p>
+              <ul className="space-y-4">
+                {project.features.map((feature, i) => (
+                  <li key={i} className="flex items-start space-x-3">
+                    <CheckCircle className="text-green-500 mt-1" />
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Bên phải: Hình ảnh */}
+            <div
+              className="overflow-hidden rounded-3xl shadow-xl"
+              data-aos="zoom-in-left"
+              data-aos-delay="400"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-[550px] object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>);
+}
+
+export default Swipper;
