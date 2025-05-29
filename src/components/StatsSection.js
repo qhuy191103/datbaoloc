@@ -25,8 +25,8 @@ const statsData = [
 
 function StatsSection() {
   return (
-    <section className="py-20 bg-blue-950">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-[color:#FFD700]">
+    <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-[#FFD700] ]">
         {statsData.map((item, index) => (
           <div
             key={index}
@@ -34,7 +34,7 @@ function StatsSection() {
             data-aos="fade-up"
             data-aos-delay={item.delay}
           >
-            <div className="text-4xl md:text-5xl font-bold mb-2">{item.number}</div>
+            <div className="text-3xl md:text-4xl font-bold mb-2">{item.number}</div>
             <div className="text-lg opacity-90">{item.label}</div>
           </div>
         ))}

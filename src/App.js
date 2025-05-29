@@ -20,7 +20,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import MapSlide from './components/MapSlide';
 import Footer from './components/Footer';
-
+import zaloLogo from './assets/images/zalo.jpg';
 
 
 function App() {
@@ -72,6 +72,17 @@ function App() {
       >
         <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </button>
+      <a
+        href="https://zalo.me/0865190441"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-24 right-8 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
+        title="Chat Zalo"
+      >
+        <img src={zaloLogo} alt="Zalo" className="w-9 h-7" />
+      </a>
+
+
     </div>
   );
 }
