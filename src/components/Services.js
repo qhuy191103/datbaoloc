@@ -6,13 +6,14 @@ function Services() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+          className="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-4"
           data-aos="fade-up"
         >
           Dịch Vụ Của Chúng Tôi
         </h2>
+
         <p
-          className="text-xl text-gray-600 max-w-3xl mx-auto"
+          className="font-thin text-xl text-gray-600 max-w-3xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
         >

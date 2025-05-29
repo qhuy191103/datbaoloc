@@ -7,10 +7,10 @@ function MapSlide() {
 
         {/* Tiêu đề */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">
             Trải Nghiệm Dự Án Bằng Công Nghệ 3D
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className=" font-thin text-lg text-gray-600 max-w-2xl mx-auto">
             Khám phá toàn cảnh không gian sống hiện đại của dự án thông qua tour 360° thực tế ảo sống động.
           </p>
         </div>

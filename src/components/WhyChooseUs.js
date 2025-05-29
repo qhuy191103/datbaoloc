@@ -8,10 +8,11 @@ function WhyChooseUs() {
 
         {/* Nội dung bên trái: 5/12 */}
         <div className="lg:col-span-5">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-6">
             Tại Sao Chọn Chúng Tôi?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+
+          <p className=" font-thin text-xl text-gray-600 mb-8">
             Với hơn 15 năm kinh nghiệm trong lĩnh vực bất động sản, chúng tôi cam kết mang đến dịch vụ tốt nhất.
           </p>
 

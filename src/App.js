@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ContactForm from './components/ContactForm';
 import Header from './components/Header';
+import Videos from './components/Videos';
 import HeroSection from './components/HeroSection';
 import StatsSection from './components/StatsSection';
 import FeatuaredProperties from './components/FeaturedProperties';
@@ -21,6 +22,7 @@ import MapSlide from './components/MapSlide';
 import Footer from './components/Footer';
 
 
+
 function App() {
 
   useEffect(() => {
@@ -29,7 +31,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-transparent">
 
       {/* Header */}
       <Header />
@@ -57,6 +59,8 @@ function App() {
 
       {/* 3D Slide */}
       <MapSlide />
+
+      <Videos />
 
       {/* footer */}
       <Footer />

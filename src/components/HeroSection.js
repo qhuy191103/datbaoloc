@@ -26,9 +26,9 @@ function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000); // mỗi 5 giây
+    }, 5000);
 
-    return () => clearInterval(interval); // cleanup
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -56,30 +56,16 @@ function HeroSection() {
         <div className="h-full flex flex-col justify-center items-center px-4">
           {/* Title and subtitle */}
           <div className="text-center text-white mb-8">
-            <h1 className="text-5xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 leading-tight">
               <span className="block">
                 {heroSlides[currentSlide].title}
               </span>
             </h1>
-            <p className="text-xl md:text-1xl opacity-90">
+            <p className="font-thin text-xl md:text-2xl opacity-90">
               {heroSlides[currentSlide].subtitle}
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-              ? 'bg-white scale-125'
-              : 'bg-white/50 hover:bg-white/80'
-              }`}
-          />
-        ))}
       </div>
     </section>
   );
