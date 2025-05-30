@@ -88,7 +88,13 @@ function LegalSection() {
 
 
           {/* Content Block */}
-          <div className="w-full lg:w-1/2 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 p-6 md:p-8 lg:p-10 text-white">
+          <div
+            className="w-full lg:w-1/2 rounded-3xl p-6 md:p-8 lg:p-10 text-white  backdrop-blur-sm"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+
+
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 text-center">
               Pháp Lý Minh Bạch - An Toàn
             </h2>
