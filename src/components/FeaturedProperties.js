@@ -1,19 +1,19 @@
 import React from 'react';
-import congvien from '../assets/images/congvien.jpg';
-import ho from '../assets/images/ho.jpg';
-import suoi from '../assets/images/Suoi.jpg';
+import SunCoffee from '../assets/images/SunCoffee.jpg';
+import SunFarm from '../assets/images/SunFarm.JPG';
+import CongVienGalaxy from '../assets/images/CongVienGalaxy.jpg';
 import hoanghon from '../assets/images/hoanghon.jpg';
-import hochanson from '../assets/images/hochanson.jpg';
+import HoCanhBuom from '../assets/images/HoCanhBuom.jpg';
 import tongquan from '../assets/images/tongquan.jpg';
 import background from '../assets/images/background.jpg';
 
 
 const properties = [
-  { id: 1, image: congvien, title: "Sun Valley Coffee", description: "Không gian cà phê ngoài trời xanh mát." },
-  { id: 2, image: hochanson, title: "Hồ cánh bướm", description: "Hồ nước trong xanh, cảnh sắc thơ mộng." },
-  { id: 3, image: suoi, title: "Club house - Sky bar", description: "Sky bar sang trọng với tầm nhìn rộng." },
+  { id: 1, image: SunCoffee, title: "Sun Valley Coffee", description: "Không gian cà phê ngoài trời xanh mát." },
+  { id: 2, image: HoCanhBuom, title: "Hồ cánh bướm", description: "Hồ nước trong xanh, cảnh sắc thơ mộng." },
+  { id: 3, image: CongVienGalaxy, title: "Công viên Galaxy", description: "Sky bar sang trọng với tầm nhìn rộng." },
   { id: 4, image: hoanghon, title: "Hồ Chanson", description: "Khung cảnh hoàng hôn tuyệt đẹp bên hồ." },
-  { id: 5, image: ho, title: "Khu vườn Yoga", description: "Không gian yên tĩnh cho tập luyện yoga." },
+  { id: 5, image: SunFarm, title: "Sun Farm", description: "Khu vườn " },
   { id: 6, image: tongquan, title: "Tuyến phố Shophouse", description: "Dãy nhà phố thương mại sầm uất." },
 ];
 

@@ -17,25 +17,25 @@ const Header = () => {
               href="#home"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Trang chủ
+              Vị trí dự án
             </a>
             <a
               href="#properties"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Bất động sản
+              Sơ đồ dự án
             </a>
             <a
               href="#services"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Dịch vụ
+              Pháp lý dự án
             </a>
             <a
               href="#contact"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Tổng quan dự án
+              Liên hệ tư vấn
             </a>
           </nav>
         </div>

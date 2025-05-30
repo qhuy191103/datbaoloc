@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import MiniVilla from '../assets/images/MiniVilla.jpg';
+import MiniVilla2 from '../assets/images/MiniVilla2.jpg';
+import Bungalow from '../assets/images/Bungalow.JPG';
+import Bungalow2 from '../assets/images/Bungalow2.JPG';
+
 
 const heroSlides = [
   {
-    image: "https://aqland.vn/wp-content/uploads/2024/09/hinh-anh-thuc-te-xay-dung-sun-valley-bao-loc-2023-4.jpg",
+    image: MiniVilla2,
     title: "Tìm Ngôi Nhà Mơ Ước",
     subtitle: "Khám phá hàng nghìn bất động sản cao cấp"
   },
   {
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80",
+    image: MiniVilla,
     title: "Đầu Tư Thông Minh",
     subtitle: "Cơ hội đầu tư bất động sản sinh lời cao"
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: Bungalow,
     title: "Dịch Vụ Chuyên Nghiệp",
     subtitle: "Tư vấn miễn phí từ chuyên gia hàng đầu"
+  },
+  {
+    image: Bungalow2,
+    title: "Không Gian Sống Đẳng Cấp",
+    subtitle: "Tận hưởng môi trường xanh, không khí trong lành và tiện ích hiện đại"
   }
+
 ];
 
 
@@ -26,7 +37,7 @@ function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);

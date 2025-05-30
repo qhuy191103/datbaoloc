@@ -19,6 +19,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import MapSlide from './components/MapSlide';
+import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
 import zaloLogo from './assets/images/zalo.jpg';
 
@@ -49,13 +50,16 @@ function App() {
       <Swipper />
 
       {/* Services */}
-      <Services />
+      {/* <Services /> */}
+
+      {/* LegalSection */}
+      <LegalSection />
 
       {/* Why Choose Us */}
       <WhyChooseUs />
 
       {/* Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* 3D Slide */}
       <MapSlide />
