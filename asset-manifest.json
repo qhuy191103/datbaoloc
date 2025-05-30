@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/datbaoloc1/static/css/main.94916c39.css",
-    "main.js": "/datbaoloc1/static/js/main.fb329d41.js",
+    "main.css": "/datbaoloc1/static/css/main.f016cd2d.css",
+    "main.js": "/datbaoloc1/static/js/main.a3f2d130.js",
     "static/js/453.c3bab9eb.chunk.js": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js",
     "static/media/Bungalow2.JPG": "/datbaoloc1/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
     "static/media/MiniVilla.jpg": "/datbaoloc1/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
@@ -18,12 +18,12 @@
     "static/media/CongVienGalaxy.jpg": "/datbaoloc1/static/media/CongVienGalaxy.6d55551ad429a1dc7beb.jpg",
     "static/media/zalo.jpg": "/datbaoloc1/static/media/zalo.2eac4970e31f8ddba490.jpg",
     "index.html": "/datbaoloc1/index.html",
-    "main.94916c39.css.map": "/datbaoloc1/static/css/main.94916c39.css.map",
-    "main.fb329d41.js.map": "/datbaoloc1/static/js/main.fb329d41.js.map",
+    "main.f016cd2d.css.map": "/datbaoloc1/static/css/main.f016cd2d.css.map",
+    "main.a3f2d130.js.map": "/datbaoloc1/static/js/main.a3f2d130.js.map",
     "453.c3bab9eb.chunk.js.map": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94916c39.css",
-    "static/js/main.fb329d41.js"
+    "static/css/main.f016cd2d.css",
+    "static/js/main.a3f2d130.js"
   ]
 }
