@@ -6,6 +6,7 @@ import { Search, TrendingUp, Shield } from 'lucide-react';
 function LegalSection() {
   return (
     <section
+      id="legalsection"
       className="relative py-20 w-full bg-cover bg-center"
       style={{ backgroundImage: `url(${background2})` }}
     >
@@ -96,30 +97,30 @@ function LegalSection() {
               Bảo Chứng Quyền Lợi – Kiến Tạo Tương Lai
             </h3>
 
-            <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 text-center">
+            {/* <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 text-center">
               Tại <strong className="text-white">Sun Valley</strong>, chúng tôi tin rằng quyết định đầu tư đúng đắn bắt đầu từ nền tảng pháp lý rõ ràng. Vì vậy:
-            </p>
+            </p> */}
 
             <div className="space-y-4 text-sm md:text-base lg:text-lg">
-              <div className="flex items-start gap-2">
+              <div className="font-thin flex items-start gap-2">
                 <span className="mt-1">•</span>
-                <p>
+                <p clas>
                   <strong>Mỗi lô đất</strong> đều có sổ hồng riêng, do cơ quan chức năng cấp, mang đến sự an tâm tuyệt đối khi giao dịch.
                 </p>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="font-thin flex items-start gap-2">
                 <span className="mt-1">•</span>
                 <p>
                   <strong>Hồ sơ pháp lý</strong> rõ ràng, minh bạch và luôn sẵn sàng để kiểm chứng.
                 </p>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="font-thin flex items-start gap-2">
                 <span className="mt-1">•</span>
                 <p>
                   <strong>Tiến độ pháp lý</strong> được kiểm soát chặt chẽ, đảm bảo thủ tục sở hữu diễn ra nhanh chóng.
                 </p>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="font-thin flex items-start gap-2">
                 <span className="mt-1">•</span>
                 <p>
                   <strong>Cam kết sở hữu lâu dài</strong>, thích hợp cho cả đầu tư và an cư bền vững.

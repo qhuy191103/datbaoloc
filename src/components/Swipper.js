@@ -56,17 +56,17 @@ function Swipper() {
               data-aos="fade-right"
               data-aos-delay="200"
             >
-              <h3 className="text-3xl font-bold text-gray-800 mb-4">
+              <h3 className="text-3xl font-playfair font-bold text-gray-800 mb-4">
                 {project.title}
               </h3>
-              <p className="text-gray-600 text-lg mb-6">
+              <p className="text-gray-600 text-thin mb-6">
                 {project.description}
               </p>
               <ul className="space-y-4">
                 {project.features.map((feature, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <CheckCircle className="text-green-500 mt-1" />
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="font-thin text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>

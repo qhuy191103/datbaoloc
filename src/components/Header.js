@@ -23,16 +23,16 @@ const Header = () => {
               href="#properties"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Sơ đồ dự án
+              Tiện ích nội khu
             </a>
             <a
-              href="#services"
+              href="#legalsection"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
               Pháp lý dự án
             </a>
             <a
-              href="#contact"
+              href="#contactme"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
               Liên hệ tư vấn

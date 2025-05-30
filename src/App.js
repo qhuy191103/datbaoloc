@@ -5,19 +5,15 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Autoplay } from "swiper/modules";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ContactForm from './components/ContactForm';
 import Header from './components/Header';
 import Videos from './components/Videos';
 import HeroSection from './components/HeroSection';
 import StatsSection from './components/StatsSection';
 import FeatuaredProperties from './components/FeaturedProperties';
 import Swipper from './components/Swipper';
-import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
 import MapSlide from './components/MapSlide';
 import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
@@ -49,17 +45,11 @@ function App() {
       {/* hahaha */}
       <Swipper />
 
-      {/* Services */}
-      {/* <Services /> */}
-
       {/* LegalSection */}
       <LegalSection />
 
       {/* Why Choose Us */}
       <WhyChooseUs />
-
-      {/* Testimonials */}
-      {/* <Testimonials /> */}
 
       {/* 3D Slide */}
       <MapSlide />
@@ -77,7 +67,7 @@ function App() {
         <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </button>
       <a
-        href="https://zalo.me/0865190441"
+        href="https://zalo.me/"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-8 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
