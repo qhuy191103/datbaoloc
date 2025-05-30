@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/datbaoloc1/static/css/main.9aa3e9f6.css",
-    "main.js": "/datbaoloc1/static/js/main.11a8f358.js",
+    "main.css": "/datbaoloc1/static/css/main.94916c39.css",
+    "main.js": "/datbaoloc1/static/js/main.fb329d41.js",
     "static/js/453.c3bab9eb.chunk.js": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js",
-    "static/media/congvien.jpg": "/datbaoloc1/static/media/congvien.b3a5a4dfcb6da8e5777f.jpg",
-    "static/media/Suoi.jpg": "/datbaoloc1/static/media/Suoi.181ea4b2bf59fbb9c428.jpg",
-    "static/media/ho.jpg": "/datbaoloc1/static/media/ho.bac97d003f35d605c464.jpg",
-    "static/media/hochanson.jpg": "/datbaoloc1/static/media/hochanson.e831f0fccd94da686401.jpg",
+    "static/media/Bungalow2.JPG": "/datbaoloc1/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
+    "static/media/MiniVilla.jpg": "/datbaoloc1/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
+    "static/media/Bungalow.JPG": "/datbaoloc1/static/media/Bungalow.ab9a129345a7c96aca13.JPG",
+    "static/media/SunCoffee.jpg": "/datbaoloc1/static/media/SunCoffee.1e24f17af0d4bc384865.jpg",
+    "static/media/GiayChungNhan.png": "/datbaoloc1/static/media/GiayChungNhan.f34bffc70bc8c2858041.png",
     "static/media/hoanghon.jpg": "/datbaoloc1/static/media/hoanghon.099396356bad85ef22a2.jpg",
+    "static/media/MiniVilla2.jpg": "/datbaoloc1/static/media/MiniVilla2.98a3d920c2a502f5d635.jpg",
     "static/media/background.jpg": "/datbaoloc1/static/media/background.21bdd78371c96a81c4ab.jpg",
+    "static/media/background2.jpg": "/datbaoloc1/static/media/background2.82df0e48d96ed6adea31.jpg",
     "static/media/tongquan.jpg": "/datbaoloc1/static/media/tongquan.05e301c0aa9552356519.jpg",
+    "static/media/SunFarm.JPG": "/datbaoloc1/static/media/SunFarm.8965366115194bad7ddf.JPG",
+    "static/media/HoCanhBuom.jpg": "/datbaoloc1/static/media/HoCanhBuom.172fc843478e8434b990.jpg",
+    "static/media/CongVienGalaxy.jpg": "/datbaoloc1/static/media/CongVienGalaxy.6d55551ad429a1dc7beb.jpg",
     "static/media/zalo.jpg": "/datbaoloc1/static/media/zalo.2eac4970e31f8ddba490.jpg",
     "index.html": "/datbaoloc1/index.html",
-    "main.9aa3e9f6.css.map": "/datbaoloc1/static/css/main.9aa3e9f6.css.map",
-    "main.11a8f358.js.map": "/datbaoloc1/static/js/main.11a8f358.js.map",
+    "main.94916c39.css.map": "/datbaoloc1/static/css/main.94916c39.css.map",
+    "main.fb329d41.js.map": "/datbaoloc1/static/js/main.fb329d41.js.map",
     "453.c3bab9eb.chunk.js.map": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9aa3e9f6.css",
-    "static/js/main.11a8f358.js"
+    "static/css/main.94916c39.css",
+    "static/js/main.fb329d41.js"
   ]
 }
