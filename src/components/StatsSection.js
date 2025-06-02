@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const statsData = [
   {
-    number: "45 ha",
+    number: "40 ha",
     label: "Quy mô dự án",
     delay: 0,
   },

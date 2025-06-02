@@ -9,12 +9,12 @@ import background from '../assets/images/background.jpg';
 
 
 const properties = [
-  { id: 1, image: SunCoffee, title: "Sun Valley Coffee", description: "Không gian cà phê ngoài trời xanh mát." },
-  { id: 2, image: HoCanhBuom, title: "Hồ cánh bướm", description: "Hồ nước trong xanh, cảnh sắc thơ mộng." },
-  { id: 3, image: CongVienGalaxy, title: "Công viên Galaxy", description: "Sky bar sang trọng với tầm nhìn rộng." },
-  { id: 4, image: hoanghon, title: "Hồ Chanson", description: "Khung cảnh hoàng hôn tuyệt đẹp bên hồ." },
+  { id: 1, image: SunCoffee, title: "Sun Valley Coffee", description: "Không gian cà phê ngoài trời xanh mát" },
+  { id: 2, image: HoCanhBuom, title: "Hồ cánh bướm", description: "Hồ nước trong xanh, cảnh sắc thơ mộng" },
+  { id: 3, image: CongVienGalaxy, title: "Công viên Galaxy", description: "Sky bar sang trọng với tầm nhìn rộng" },
+  // { id: 4, image: hoanghon, title: "Hồ Chanson", description: "Khung cảnh hoàng hôn tuyệt đẹp bên hồ." },
   { id: 5, image: SunFarm, title: "Sun Farm", description: "Khu vườn " },
-  { id: 6, image: tongquan, title: "Tuyến phố Shophouse", description: "Dãy nhà phố thương mại sầm uất." },
+  { id: 6, image: tongquan, title: "Tuyến phố Shophouse", description: "Dãy nhà phố thương mại sầm uất  " },
 ];
 
 function FeatuaredProperties() {
@@ -39,7 +39,7 @@ function FeatuaredProperties() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {properties.map((property, index) => (
             <div
               key={property.id}

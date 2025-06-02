@@ -15,7 +15,7 @@ function LegalSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SERVICES */}
-        <div className="text-center mb-20">
+        {/* <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold font-playfair text-white mb-4" data-aos="fade-up">
             Dịch Vụ Của Chúng Tôi
           </h2>
@@ -26,9 +26,9 @@ function LegalSection() {
           >
             Đội ngũ chuyên gia giàu kinh nghiệm luôn sẵn sàng hỗ trợ bạn trong mọi giao dịch bất động sản tại dự án Sun Valley, đảm bảo quá trình đầu tư, mua bán diễn ra thuận lợi, minh bạch và hiệu quả nhất.
           </p>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-28">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-28">
           <div
             className="text-center p-8 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             data-aos="zoom-in"
@@ -70,7 +70,7 @@ function LegalSection() {
               Đội ngũ luật sư chuyên nghiệp hỗ trợ thủ tục pháp lý, đảm bảo giao dịch an toàn và minh bạch.
             </p>
           </div>
-        </div>
+        </div> */}
 
 
         {/* LEGAL SECTION */}

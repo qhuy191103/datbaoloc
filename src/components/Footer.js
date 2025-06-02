@@ -42,7 +42,7 @@ function Footer() {
               </div>
 
               {/* Social Media */}
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:from-blue-500 hover:to-blue-600 transition-all duration-300 cursor-pointer group">
                   <Facebook className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 </div>
@@ -52,7 +52,7 @@ function Footer() {
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center hover:from-pink-400 hover:to-purple-500 transition-all duration-300 cursor-pointer group">
                   <Instagram className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="lg:col-span-2">

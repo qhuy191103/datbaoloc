@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Videos from './components/Videos';
 import HeroSection from './components/HeroSection';
+import FloatingForm from './components/FloatingForm';
 import StatsSection from './components/StatsSection';
 import FeatuaredProperties from './components/FeaturedProperties';
 import Swipper from './components/Swipper';
@@ -17,66 +18,23 @@ import WhyChooseUs from './components/WhyChooseUs';
 import MapSlide from './components/MapSlide';
 import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
-import zaloLogo from './assets/images/zalo.jpg';
+import zaloLogo from './assets/images/Icon-Zalo-2021.png';
 
 
 function App() {
-
-  useEffect(() => {
-    AOS.init({ once: true, duration: 800 });
-  }, []);
-
-
+  const [showForm, setShowForm] = useState(true);
   return (
     <div className="min-h-screen bg-transparent">
-
-      {/* Header */}
+      {showForm && <FloatingForm closeForm={() => setShowForm(false)} />}
       <Header />
-
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* Stats Section */}
       <StatsSection />
-
-      {/* Featured Properties */}
       <FeatuaredProperties />
-
-      {/* hahaha */}
       <Swipper />
-
-      {/* LegalSection */}
       <LegalSection />
-
-      {/* Why Choose Us */}
-      <WhyChooseUs />
-
-      {/* 3D Slide */}
       <MapSlide />
-
       <Videos />
-
-      {/* footer */}
       <Footer />
-
-      {/* Back to top button */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-800 to-purple-800 text-orange-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
-      >
-        <ArrowRight className="h-5 w-5 transform -rotate-90" />
-      </button>
-      <a
-        href="https://zalo.me/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-24 right-8 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
-        title="Chat Zalo"
-      >
-        <img src={zaloLogo} alt="Zalo" className="w-9 h-7" />
-      </a>
-
-
     </div>
   );
 }

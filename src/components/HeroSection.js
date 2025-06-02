@@ -57,7 +57,7 @@ function HeroSection() {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/10"></div>
           </div>
         ))}
       </div>
@@ -67,12 +67,12 @@ function HeroSection() {
         <div className="h-full flex flex-col justify-center items-center px-4">
           {/* Title and subtitle */}
           <div className="text-center text-white mb-8">
-            <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-6 leading-tight">
+            <h1 className="text-7xl md:text-7xl font-playfair font-bold mb-6 leading-tight">
               <span className="block">
                 {heroSlides[currentSlide].title}
               </span>
             </h1>
-            <p className="font-thin text-xl md:text-2xl opacity-90">
+            <p className="font-thin text-3xl md:text-3xl opacity-90">
               {heroSlides[currentSlide].subtitle}
             </p>
           </div>
