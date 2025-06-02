@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/datbaoloc1/static/css/main.aabc5ca5.css",
-    "main.js": "/datbaoloc1/static/js/main.c0063a67.js",
+    "main.css": "/datbaoloc1/static/css/main.977d91bc.css",
+    "main.js": "/datbaoloc1/static/js/main.c063b20f.js",
     "static/js/453.c3bab9eb.chunk.js": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js",
     "static/media/Bungalow2.JPG": "/datbaoloc1/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
     "static/media/MiniVilla.jpg": "/datbaoloc1/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
@@ -18,12 +18,12 @@
     "static/media/CongVienGalaxy.jpg": "/datbaoloc1/static/media/CongVienGalaxy.6d55551ad429a1dc7beb.jpg",
     "static/media/Icon-Zalo-2021.png": "/datbaoloc1/static/media/Icon-Zalo-2021.7d70563d134306b5886d.png",
     "index.html": "/datbaoloc1/index.html",
-    "main.aabc5ca5.css.map": "/datbaoloc1/static/css/main.aabc5ca5.css.map",
-    "main.c0063a67.js.map": "/datbaoloc1/static/js/main.c0063a67.js.map",
+    "main.977d91bc.css.map": "/datbaoloc1/static/css/main.977d91bc.css.map",
+    "main.c063b20f.js.map": "/datbaoloc1/static/js/main.c063b20f.js.map",
     "453.c3bab9eb.chunk.js.map": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aabc5ca5.css",
-    "static/js/main.c0063a67.js"
+    "static/css/main.977d91bc.css",
+    "static/js/main.c063b20f.js"
   ]
 }
