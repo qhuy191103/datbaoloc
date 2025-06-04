@@ -14,22 +14,28 @@ const Header = () => {
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a
-              href="#home"
-              className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
-            >
-              Vị trí dự án
-            </a>
-            <a
               href="#properties"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
               Tiện ích nội khu
             </a>
             <a
+              href="#location"
+              className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
+            >
+              Vị trí dự án
+            </a>
+            <a
               href="#legalsection"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
               Pháp lý dự án
+            </a>
+            <a
+              href="#contact"
+              className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
+            >
+              360°
             </a>
             <a
               href="#contactme"

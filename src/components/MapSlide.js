@@ -13,10 +13,10 @@ function MapSlide() {
           data-aos-delay="100"
         >
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">
-            Trải Nghiệm Dự Án Bằng Công Nghệ 3D
+            Sơ Đồ 360° dự án
           </h2>
           <p className=" font-thin text-lg text-gray-600 max-w-2xl mx-auto">
-            Khám phá toàn cảnh không gian sống hiện đại của dự án thông qua tour 360° thực tế ảo sống động.
+            Khám phá toàn cảnh không gian sống hiện đại của Sun Valley thông qua tour 360° thực tế ảo sống động.
           </p>
         </div>
 

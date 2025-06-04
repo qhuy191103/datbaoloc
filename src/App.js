@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Facebook, Twitter, Instagram, Mail, MapPin } from 'lucide-react';
+import { Search, Star, ArrowRight, Phone, CheckCircle, TrendingUp, Shield, Facebook, Twitter, Instagram, Mail, MapPin } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -19,6 +19,7 @@ import MapSlide from './components/MapSlide';
 import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
 import zaloLogo from './assets/images/Icon-Zalo-2021.png';
+import PhoneCall from './assets/images/phone-call.png';
 
 
 function App() {
@@ -68,20 +69,30 @@ function App() {
       >
         <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </button>
-      <div className="fixed bottom-8 left-8 flex items-center space-x-2 z-50">
+
+      {/* Contact */}
+      <div className="fixed bottom-8 left-8 flex flex-col items-center space-y-3 z-50">
+        {/* Zalo */}
         <a
           href="https://zalo.me/0941366369"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          className="w-12 h-12 bg-blue-600  rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
           title="Chat Zalo"
         >
           <img src={zaloLogo} alt="Zalo" className="w-10 h-9" />
         </a>
-        <span className="text-white bg-blue-500 px-2 py-1 rounded-md shadow-lg">
-          0941366369
-        </span>
+
+        {/* Phone Contact */}
+        <a
+          href="tel:0941366369"
+          className="w-12 h-12  bg-gradient-to-r from-orange-500 to-red-600 border-white text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          title="Gọi ngay"
+        >
+          <img src={PhoneCall} alt="Call" className="w-10 h-10" />
+        </a>
       </div>
+
 
     </div>
   );
