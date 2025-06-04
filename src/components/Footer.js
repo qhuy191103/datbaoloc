@@ -44,7 +44,7 @@ function Footer() {
                   <span>info.vunguyen@gmail.com</span>
                 </div>
 
-                <div className="flex items-start space-x-3">
+                {/* <div className="flex items-start space-x-3">
                   <span className="font-medium">Website:</span>
                   <a
                     href="https://sunvalley.com.vn/"
@@ -54,7 +54,7 @@ function Footer() {
                   >
                     sunvalley.com.vn
                   </a>
-                </div>
+                </div> */}
 
                 <div>
                   <div className="relative rounded-lg overflow-hidden border border-white/20 shadow-lg transition-all duration-300" style={{ aspectRatio: '16 / 9' }}>
