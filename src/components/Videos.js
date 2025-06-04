@@ -5,7 +5,6 @@ function Videos() {
   const containerRef = useRef(null);
   const [player, setPlayer] = useState(null);
 
-  // Tải YouTube Iframe API
   useEffect(() => {
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
@@ -57,7 +56,6 @@ function Videos() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
         </div>
-
         {/* Video */}
         <div className="relative rounded-3xl overflow-hidden shadow-xl border border-gray-700 group">
           <div className="relative w-full pb-[56.25%] bg-black">

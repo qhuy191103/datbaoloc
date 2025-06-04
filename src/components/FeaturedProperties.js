@@ -1,4 +1,9 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 import SunCoffee from '../assets/images/SunCoffee.jpg';
 import SunFarm from '../assets/images/SunFarm.JPG';
 import CongVienGalaxy from '../assets/images/CongVienGalaxy.jpg';
@@ -14,7 +19,7 @@ const properties = [
   { id: 3, image: CongVienGalaxy, title: "Công viên Galaxy", description: "Sky bar sang trọng với tầm nhìn rộng" },
   { id: 5, image: SunFarm, title: "Sun Farm", description: "Khu vườn hữu cơ xanh mát, nơi trải nghiệm nông nghiệp sạch" },
   { id: 6, image: tongquan, title: "Tuyến phố Shophouse", description: "Dãy nhà phố thương mại sầm uất" },
-  { id: 7, image: NongTraiHuuCo, title: "Nông trại hữu cơ", description: "Dãy nhà phố thương mại sầm uất" },
+  { id: 7, image: NongTraiHuuCo, title: "Nông trại hữu cơ", description: "Nông trại xanh, sạch, bền vững, gắn kết thiên nhiên" },
 ];
 
 function FeatuaredProperties() {
@@ -78,11 +83,46 @@ function FeatuaredProperties() {
           <p><strong>Sun Valley</strong> – Điểm đến tiên phong theo mô hình Bất động sản du lịch trải nghiệm tại Bảo Lộc, được phát triển với triết lý "lấy khách hàng làm trung tâm", dựa trên ba trụ cột: <strong>Lưu trú – Giải trí – Du lịch</strong>. Dự án mang lại không gian thư giãn yên bình giữa thiên nhiên trong lành, kết hợp khu vui chơi, giải trí và tiện ích hiện đại, bao gồm:</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Swiper - Mobile */}
+        <div className="block lg:hidden">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1.1}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+          >
+            {properties.map((property, index) => (
+              <SwiperSlide key={property.id}>
+                <div
+                  className="flex flex-col h-full bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-500 hover:shadow-2xl hover:scale-[1.05]"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="relative group overflow-hidden">
+                    <img
+                      src={property.image}
+                      alt={property.title}
+                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  {/* <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-yellow-500 cursor-pointer transition-colors">
+                      {property.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm flex-grow">{property.description}</p>
+                  </div> */}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Grid - Desktop */}
+        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property, index) => (
             <div
               key={property.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-500 hover:shadow-2xl hover:scale-[1.05]"
+              className="flex flex-col h-full bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-500 hover:shadow-2xl hover:scale-[1.05]"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -93,11 +133,11 @@ function FeatuaredProperties() {
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-yellow-500 cursor-pointer transition-colors">
                   {property.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{property.description}</p>
+                <p className="text-gray-600 text-sm flex-grow">{property.description}</p>
               </div>
             </div>
           ))}
