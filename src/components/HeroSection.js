@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MiniVilla from '../assets/images/MiniVilla.jpg';
 import MiniVilla2 from '../assets/images/MiniVilla2.jpg';
-import Bungalow from '../assets/images/Bungalow.JPG';
 import Bungalow2 from '../assets/images/Bungalow2.JPG';
 
 
@@ -15,11 +14,6 @@ const heroSlides = [
     image: MiniVilla,
     title: "Đầu Tư Thông Minh",
     subtitle: "Cơ hội đầu tư bất động sản sinh lời cao"
-  },
-  {
-    image: Bungalow,
-    title: "Dịch Vụ Chuyên Nghiệp",
-    subtitle: "Tư vấn miễn phí từ chuyên gia hàng đầu"
   },
   {
     image: Bungalow2,
