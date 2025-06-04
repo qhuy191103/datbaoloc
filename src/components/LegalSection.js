@@ -93,20 +93,23 @@ function LegalSection() {
             data-aos="fade-left"
             data-aos-delay="300"
           >
-
-
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 text-center">
+            <h2
+              className="text-4xl md:text-5xl font-extrabold font-playfair bg-clip-text text-transparent text-center"
+              style={{
+                background: "linear-gradient(to right, #f9f6d3, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
+            >
               Pháp Lý Minh Bạch - An Toàn
             </h2>
-
-            <h3 className="text-base md:text-lg lg:text-xl font-thin mb-6 text-center uppercase tracking-wide">
+            <h3 className="mt-3 text-base md:text-lg lg:text-xl font-thin mb-6 text-center uppercase tracking-wide" style={{
+              background: "linear-gradient(to right, #f9f6d3, #d2be85)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent"
+            }}>
               Bảo Chứng Quyền Lợi – Kiến Tạo Tương Lai
             </h3>
-
-            {/* <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 text-center">
-              Tại <strong className="text-white">Sun Valley</strong>, chúng tôi tin rằng quyết định đầu tư đúng đắn bắt đầu từ nền tảng pháp lý rõ ràng. Vì vậy:
-            </p> */}
-
             <div className="space-y-4 text-sm md:text-base lg:text-lg">
               <div className="font-thin flex items-start gap-2">
                 <span className="mt-1">•</span>

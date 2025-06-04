@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 
 const projectSlides = [
   {
-    title: "GIAO LỘ THỊNH VƯỢNG MỘT BƯỚC CHÂN NGÀN TIỆN ÍCH",
+    title: "Giao lộ vàng, ngàn tiện ích",
     description:
       "Nằm giữa 3 trục đường chính là Tản Đà – Lý Thường Kiệt – cao tốc Dầu Giây – Liên Khương nên việc di chuyển đến các nơi là vô cùng thuận tiện...",
     features: [
@@ -16,7 +16,7 @@ const projectSlides = [
       "https://sunvalley.vn/wp-content/uploads/2024/08/Ban-do-vi-tri-va-cao-toc@4x-2048x1575.png.webp",
   },
   {
-    title: "Từ Sun Valley cũng dễ dàng di chuyển đến các địa điểm như:",
+    title: "Sun Valley thuận tiện di chuyển",
     description:
       "Các điểm tham quan du lịch nổi tiếng: thác ĐamB’ri, tu viện Bát Nhã, đồi chè Tâm Châu,…",
     features: [
@@ -64,10 +64,18 @@ function Swipper() {
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-center w-full">
                   {/* Nội dung */}
                   <div data-aos="fade-right" data-aos-delay="200">
-                    <h3 className="text-4xl font-playfair font-bold text-gray-800 mb-4">
+                    <h1
+                      className="text-4xl mb-5 md:text-5xl font-extrabold font-playfair bg-clip-text text-transparent "
+                      style={{
+                        background: "linear-gradient(to right, #d2be85, #caa340)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
+                      }}
+                    >
                       {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-thin mb-6">
+                    </h1>
+
+                    <p className="mt-5 text-gray-600 text-thin mb-6">
                       {project.description}
                     </p>
                     <ul className="space-y-4">

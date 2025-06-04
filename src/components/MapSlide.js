@@ -6,10 +6,17 @@ function MapSlide() {
     <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-900 mb-4">
+          <h2
+            className="text-4xl md:text-5xl font-extrabold font-playfair bg-clip-text text-transparent"
+            style={{
+              background: "linear-gradient(to right, #f9f6d3, #caa340, #66400c)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent"
+            }}
+          >
             Sơ Đồ 360° dự án
           </h2>
-          <p className="font-thin text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 font-thin text-lg text-gray-600 max-w-2xl mx-auto">
             Khám phá toàn cảnh không gian sống hiện đại của Sun Valley thông qua tour 360° thực tế ảo sống động.
           </p>
         </div>

@@ -16,30 +16,51 @@ const Header = () => {
             <a
               href="#properties"
               className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg"
+              style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
             >
               Tổng quan dự án
             </a>
             <a
               href="#location"
-              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg"
+              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg" style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
             >
               Vị trí dự án
             </a>
             <a
               href="#legalsection"
-              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg"
+              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg" style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
             >
               Pháp lý dự án
             </a>
             <a
               href="#contact"
-              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg"
+              className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium text-lg" style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
             >
               360°
             </a>
             <a
               href="#contactme"
-              className="text-amber-400 hover:text-yellow-500 transition-colors font-medium text-lg"
+              className="text-amber-400 hover:text-yellow-500 transition-colors font-medium text-lg" style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
             >
               Liên hệ tư vấn
             </a>

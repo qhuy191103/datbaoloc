@@ -43,19 +43,6 @@ function Footer() {
                   <Mail className="h-5 w-5 text-blue-400 mt-1" />
                   <span>info.vunguyen@gmail.com</span>
                 </div>
-
-                {/* <div className="flex items-start space-x-3">
-                  <span className="font-medium">Website:</span>
-                  <a
-                    href="https://sunvalley.com.vn/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline"
-                  >
-                    sunvalley.com.vn
-                  </a>
-                </div> */}
-
                 <div>
                   <div className="relative rounded-lg overflow-hidden border border-white/20 shadow-lg transition-all duration-300" style={{ aspectRatio: '16 / 9' }}>
                     <iframe
