@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/datbaoloc1/static/css/main.c5ebb9bc.css",
-    "main.js": "/datbaoloc1/static/js/main.692dc272.js",
+    "main.js": "/datbaoloc1/static/js/main.15e2f90a.js",
     "static/js/453.c3bab9eb.chunk.js": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js",
     "static/media/Bungalow2.JPG": "/datbaoloc1/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
     "static/media/MiniVilla.jpg": "/datbaoloc1/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
-    "static/media/Bungalow.JPG": "/datbaoloc1/static/media/Bungalow.ab9a129345a7c96aca13.JPG",
     "static/media/SunCoffee.jpg": "/datbaoloc1/static/media/SunCoffee.1e24f17af0d4bc384865.jpg",
     "static/media/GiayChungNhan.png": "/datbaoloc1/static/media/GiayChungNhan.f34bffc70bc8c2858041.png",
     "static/media/hoanghon.jpg": "/datbaoloc1/static/media/hoanghon.099396356bad85ef22a2.jpg",
@@ -21,11 +20,11 @@
     "static/media/phone-call.png": "/datbaoloc1/static/media/phone-call.555baddb7dc7222fcd8d.png",
     "index.html": "/datbaoloc1/index.html",
     "main.c5ebb9bc.css.map": "/datbaoloc1/static/css/main.c5ebb9bc.css.map",
-    "main.692dc272.js.map": "/datbaoloc1/static/js/main.692dc272.js.map",
+    "main.15e2f90a.js.map": "/datbaoloc1/static/js/main.15e2f90a.js.map",
     "453.c3bab9eb.chunk.js.map": "/datbaoloc1/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5ebb9bc.css",
-    "static/js/main.692dc272.js"
+    "static/js/main.15e2f90a.js"
   ]
 }
