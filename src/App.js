@@ -40,7 +40,7 @@ function App() {
       <HeroSection />
 
       {/* Stats Section */}
-      <StatsSection />
+      {/* <StatsSection /> */}
 
       {/* Featured Properties */}
       <FeatuaredProperties />
@@ -92,8 +92,6 @@ function App() {
           <img src={PhoneCall} alt="Call" className="w-10 h-10" />
         </a>
       </div>
-
-
     </div>
   );
 }

@@ -17,7 +17,7 @@ const Header = () => {
               href="#properties"
               className="text-orange-200 hover:text-blue-600 transition-colors font-medium"
             >
-              Tiện ích nội khu
+              Tổng quan dự án
             </a>
             <a
               href="#location"

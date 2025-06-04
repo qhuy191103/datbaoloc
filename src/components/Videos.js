@@ -15,7 +15,7 @@ function Videos() {
       const ytPlayer = new window.YT.Player('yt-player', {
         height: '100%',
         width: '100%',
-        videoId: 'rmK0QKvhY98',
+        videoId: '2uoi3Cptukg',
         playerVars: {
           autoplay: 0,
           controls: 1,
@@ -33,7 +33,6 @@ function Videos() {
     };
   }, []);
 
-  // Auto play khi thấy component
   useEffect(() => {
     if (!containerRef.current || !player) return;
 
@@ -57,12 +56,6 @@ function Videos() {
     <section className="bg-gray-900 py-24" ref={containerRef}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          {/* <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Trải Nghiệm Công Nghệ 3D
-          </h2>
-          <p className="text-lg text-gray-300 max-w-xl mx-auto">
-            Tour thực tế ảo giúp bạn khám phá không gian sống hiện đại như đang đứng tại chỗ.
-          </p> */}
         </div>
 
         {/* Video */}
