@@ -11,7 +11,8 @@ function MapSlide() {
             style={{
               background: "linear-gradient(to right, #f9f6d3, #caa340, #66400c)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
+              WebkitTextFillColor: "transparent",
+              paddingBottom: "1rem"
             }}
           >
             Sơ Đồ 360° dự án

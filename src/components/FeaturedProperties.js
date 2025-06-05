@@ -34,19 +34,21 @@ function FeatuaredProperties() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2
-            className="text-4xl md:text-5xl font-extrabold font-playfair bg-clip-text text-transparent"
+          <h1
+            className="text-2xl md:text-5xl font-extrabold font-playfair bg-clip-text text-transparent"
             style={{
               background: "linear-gradient(to right, #f9f6d3, #caa340, #66400c)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
+              WebkitTextFillColor: "transparent",
+              paddingBottom: "1rem"
             }}
           >
             Tiện ích nội khu
-          </h2>
+          </h1>
           <p className="mt-3 font-thin text-xl text-gray-700 max-w-2xl mx-auto">
             Tận hưởng không gian sống đẳng cấp với hệ thống tiện ích nội khu đa dạng và hiện đại
           </p>
+
         </div>
 
         <div className="mb-16 text-gray-800 text-lg space-y-6">

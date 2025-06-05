@@ -69,7 +69,8 @@ function Swipper() {
                       style={{
                         background: "linear-gradient(to right, #d2be85, #caa340)",
                         WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent"
+                        WebkitTextFillColor: "transparent",
+                        paddingBottom: "1rem"
                       }}
                     >
                       {project.title}
