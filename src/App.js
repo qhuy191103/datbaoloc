@@ -73,7 +73,7 @@ function App() {
       {/* Contact */}
       <div className="fixed bottom-8 left-8 flex flex-col items-center space-y-3 z-50">
         {/* Zalo */}
-        <a
+        {/* <a
           href="https://zalo.me/0941366369"
           target="_blank"
           rel="noopener noreferrer"
@@ -81,8 +81,16 @@ function App() {
           title="Chat Zalo"
         >
           <img src={zaloLogo} alt="Zalo" className="w-10 h-9" />
+        </a> */}
+        <a
+          href="https://zalo.me/0907210293"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 bg-blue-600  rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          title="Chat Zalo"
+        >
+          <img src={zaloLogo} alt="Zalo" className="w-10 h-9" />
         </a>
-
         {/* Phone Contact */}
         <a
           href="tel:0941366369"

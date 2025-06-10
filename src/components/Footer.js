@@ -38,12 +38,16 @@ function Footer() {
 
                 <div className="flex items-start space-x-3">
                   <Phone className="h-5 w-5 text-blue-400 mt-1" />
-                  <span>0941 366 369</span>
+                  {/* <span>0941 366 369</span> */}
+                  <span>0907 210 293</span>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <Mail className="h-5 w-5 text-blue-400 mt-1" />
-                  <span>info.vunguyen@gmail.com</span>
+                  {/* <span>info.vunguyen@gmail.com</span> */}
+                  <span>
+                    trantdxx@gmail.com
+                  </span>
                 </div>
                 <div>
                   <div className="relative rounded-lg overflow-hidden border border-white/20 shadow-lg transition-all duration-300" style={{ aspectRatio: '16 / 9' }}>
