@@ -93,7 +93,7 @@ function App() {
         </a>
         {/* Phone Contact */}
         <a
-          href="tel:0941366369"
+          href="tel:0907210293"
           className="w-12 h-12  bg-gradient-to-r from-orange-500 to-red-600 border-white text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
           title="Gọi ngay"
         >
