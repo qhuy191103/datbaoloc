@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRight, X } from "lucide-react";
+import AnhDuy from '../assets/images/anhduydeptrai.jpg';
 
 const FloatingForm = ({ closeForm }) => {
   const [formData, setFormData] = useState({
@@ -57,98 +58,125 @@ const FloatingForm = ({ closeForm }) => {
 
   return (
     <div className="px-5 fixed inset-2 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-5 rounded-xl shadow-xl w-96 relative">
+      <div className="bg-white rounded-xl shadow-2xl max-w-4xl w-full relative overflow-hidden">
         {/* Nút đóng */}
         <button
           onClick={closeForm}
-          className="absolute top-3 right-3 text-gray-400 hover:text-teal-600 transition"
+          className="absolute top-4 right-4 text-gray-400 hover:text-teal-600 transition z-10 bg-white rounded-full p-1 shadow-lg"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <h2 className="text-xl font-bold text-blue-700 mb-4 text-center">Nhận thông tin tư vấn</h2>
+        <div className="flex">
+          {/* Phần ảnh bên trái */}
+          <div className="hidden md:block md:w-1/2 relative">
+            <div className="h-full bg-gradient-to-br from-blue-500 via-purple-600 to-teal-500 flex items-center justify-center relative overflow-hidden">
+              <img
+                src={AnhDuy}
+                alt="Pháp lý bất động sản"
+                className="w-full h-full object-cover"
+              />
 
-        {/* Notification */}
-        {notification && (
-          <div
-            className={`mb-3 text-sm text-center font-medium rounded px-3 py-2 transition-all duration-300 ${notification.type === "success"
-              ? "bg-teal-100 text-teal-800"
-              : "bg-red-100 text-red-700"
-              }`}
-          >
-            {notification.message}
-          </div>
-        )}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm"
-              placeholder="Nhập họ và tên"
-            />
+            </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              required
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm"
-              placeholder="0123 456 789"
-            />
-          </div>
+          {/* Phần form bên phải */}
+          <div className="w-full md:w-1/2 p-6">
+            <h2 className="text-xl font-bold text-blue-700 mb-4 text-center md:text-left" style={{
+              background: "linear-gradient(to right, #caa340)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              paddingBottom: "1rem"
+            }}>Nhận thông tin tư vấn</h2>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm"
-              placeholder="email@example.com"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Ghi chú</label>
-            <textarea
-              name="note"
-              value={formData.note}
-              onChange={handleInputChange}
-              rows={3}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm resize-none"
-              placeholder="Mô tả nhu cầu..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700  text-white px-4 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold text-sm disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <>
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                <span>Đang gửi...</span>
-              </>
-            ) : (
-              <>
-                <ArrowRight className="h-5 w-5" />
-                <span>Gửi thông tin liên hệ</span>
-              </>
+            {/* Notification */}
+            {notification && (
+              <div
+                className={`mb-3 text-sm text-center font-medium rounded px-3 py-2 transition-all duration-300 ${notification.type === "success"
+                  ? "bg-teal-100 text-teal-800"
+                  : "bg-red-100 text-red-700"
+                  }`}
+              >
+                {notification.message}
+              </div>
             )}
-          </button>
-        </form>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-700 text-sm"
+                  placeholder="Nhập họ và tên"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-700 text-sm"
+                  placeholder="0123 456 789"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-700 text-sm"
+                  placeholder="email@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Ghi chú</label>
+                <textarea
+                  name="note"
+                  value={formData.note}
+                  onChange={handleInputChange}
+                  rows={3}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-700 text-sm resize-none"
+                  placeholder="Mô tả nhu cầu..."
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={handleSubmit}
+                disabled={isSubmitting}
+                style={{
+                  background: "linear-gradient(to right, #caa340)",
+                }}
+                className="w-full text-white px-4 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold text-sm disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    <span>Đang gửi...</span>
+                  </>
+                ) : (
+                  <>
+                    <ArrowRight className="h-5 w-5" />
+                    <span>Gửi thông tin liên hệ</span>
+                  </>
+                )}
+              </button>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

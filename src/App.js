@@ -65,7 +65,7 @@ function App() {
       {/* Back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-800 to-purple-800 text-orange-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-900 to-purple-900 text-orange-300 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
       >
         <ArrowRight className="h-5 w-5 transform -rotate-90" />
       </button>
