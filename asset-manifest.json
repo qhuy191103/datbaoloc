@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ca70c90.css",
-    "main.js": "/static/js/main.9f46b6eb.js",
+    "main.css": "/static/css/main.8d698d0a.css",
+    "main.js": "/static/js/main.37946fa2.js",
     "static/js/453.c3bab9eb.chunk.js": "/static/js/453.c3bab9eb.chunk.js",
     "static/media/Bungalow2.JPG": "/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
     "static/media/MiniVilla.jpg": "/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
@@ -10,6 +10,7 @@
     "static/media/hoanghon.jpg": "/static/media/hoanghon.099396356bad85ef22a2.jpg",
     "static/media/MiniVilla2.jpg": "/static/media/MiniVilla2.98a3d920c2a502f5d635.jpg",
     "static/media/TongQuanDuAn.jpg": "/static/media/TongQuanDuAn.544d6eff16763394f52d.jpg",
+    "static/media/anhduydeptrai.jpg": "/static/media/anhduydeptrai.5af163631683eca35028.jpg",
     "static/media/background.jpg": "/static/media/background.21bdd78371c96a81c4ab.jpg",
     "static/media/NongTraiHuuCo.JPG": "/static/media/NongTraiHuuCo.5ba00eed068f00804bdf.JPG",
     "static/media/background2.jpg": "/static/media/background2.82df0e48d96ed6adea31.jpg",
@@ -20,12 +21,12 @@
     "static/media/Icon-Zalo-2021.png": "/static/media/Icon-Zalo-2021.7d70563d134306b5886d.png",
     "static/media/phone-call.png": "/static/media/phone-call.555baddb7dc7222fcd8d.png",
     "index.html": "/index.html",
-    "main.5ca70c90.css.map": "/static/css/main.5ca70c90.css.map",
-    "main.9f46b6eb.js.map": "/static/js/main.9f46b6eb.js.map",
+    "main.8d698d0a.css.map": "/static/css/main.8d698d0a.css.map",
+    "main.37946fa2.js.map": "/static/js/main.37946fa2.js.map",
     "453.c3bab9eb.chunk.js.map": "/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ca70c90.css",
-    "static/js/main.9f46b6eb.js"
+    "static/css/main.8d698d0a.css",
+    "static/js/main.37946fa2.js"
   ]
 }
