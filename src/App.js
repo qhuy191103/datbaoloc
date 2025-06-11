@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, Star, ArrowRight, Phone, CheckCircle, TrendingUp, Shield, Facebook, Twitter, Instagram, Mail, MapPin } from 'lucide-react';
+import { Search, Star, ArrowRight, Phone, CheckCircle, TrendingUp, Shield, Facebook, Twitter, Instagram, Mail, MapPin, Quote } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -20,6 +20,7 @@ import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
 import zaloLogo from './assets/images/Icon-Zalo-2021.png';
 import PhoneCall from './assets/images/phone-call.png';
+import QuoteComponent from './components/Quote';
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Quote */}
+      <QuoteComponent />
 
       {/* Stats Section */}
       {/* <StatsSection /> */}

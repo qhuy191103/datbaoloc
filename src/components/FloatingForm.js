@@ -82,7 +82,7 @@ const FloatingForm = ({ closeForm }) => {
 
           {/* Phần form bên phải */}
           <div className="w-full md:w-1/2 p-6">
-            <h2 className="text-xl font-bold text-blue-700 mb-4 text-center md:text-left" style={{
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 text-center md:text-left" style={{
               background: "linear-gradient(to right, #caa340)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
