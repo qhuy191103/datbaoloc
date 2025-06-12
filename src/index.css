@@ -15,3 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #caa340 !important;
+  /* Màu vàng ánh kim */
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #d2be85 !important;
+  /* Nhẹ hơn khi hover */
+}
