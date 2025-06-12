@@ -37,7 +37,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden pt-28">
+    <section id="home" className="relative z-20 h-screen overflow-hidden pt-20">
       {/* Background slides */}
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => (
