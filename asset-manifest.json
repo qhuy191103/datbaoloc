@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.05d3b4d0.css",
-    "main.js": "/static/js/main.89f7e57b.js",
+    "main.css": "/static/css/main.b653df87.css",
+    "main.js": "/static/js/main.0a891658.js",
     "static/js/453.c3bab9eb.chunk.js": "/static/js/453.c3bab9eb.chunk.js",
     "static/media/Bungalow2.JPG": "/static/media/Bungalow2.fdbfe307962ca8b4aa8d.JPG",
     "static/media/MiniVilla.jpg": "/static/media/MiniVilla.f386c9e9b8ee0720df35.jpg",
@@ -21,12 +21,12 @@
     "static/media/Icon-Zalo-2021.png": "/static/media/Icon-Zalo-2021.7d70563d134306b5886d.png",
     "static/media/phone-call.png": "/static/media/phone-call.555baddb7dc7222fcd8d.png",
     "index.html": "/index.html",
-    "main.05d3b4d0.css.map": "/static/css/main.05d3b4d0.css.map",
-    "main.89f7e57b.js.map": "/static/js/main.89f7e57b.js.map",
+    "main.b653df87.css.map": "/static/css/main.b653df87.css.map",
+    "main.0a891658.js.map": "/static/js/main.0a891658.js.map",
     "453.c3bab9eb.chunk.js.map": "/static/js/453.c3bab9eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05d3b4d0.css",
-    "static/js/main.89f7e57b.js"
+    "static/css/main.b653df87.css",
+    "static/js/main.0a891658.js"
   ]
 }
