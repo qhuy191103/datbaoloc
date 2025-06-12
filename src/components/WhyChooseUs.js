@@ -18,7 +18,13 @@ function WhyChooseUs() {
 
           {/* Nội dung bên trái: 5/12 */}
           <div className="lg:col-span-5" data-aos="fade-right">
-            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-900 mb-6"
+              style={{
+                background: "linear-gradient(to right, #d2be85, #caa340)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                paddingBottom: "1rem"
+              }}>
               Tại Sao Chọn Chúng Tôi?
             </h2>
 
