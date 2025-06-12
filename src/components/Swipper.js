@@ -45,7 +45,7 @@ function Swipper() {
 
   return (
     <section id="location">
-      <div className="container mx-auto py-14">
+      <div className="container mx-auto py-14 bg-gray-50">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation

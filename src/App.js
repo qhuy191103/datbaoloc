@@ -10,8 +10,10 @@ import Header from './components/Header';
 import Videos from './components/Videos';
 import HeroSection from './components/HeroSection';
 import FloatingForm from './components/FloatingForm';
+import StatsSection from './components/StatsSection';
 import FeatuaredProperties from './components/FeaturedProperties';
 import Swipper from './components/Swipper';
+import WhyChooseUs from './components/WhyChooseUs';
 import MapSlide from './components/MapSlide';
 import LegalSection from './components/LegalSection';
 import Footer from './components/Footer';
@@ -21,8 +23,17 @@ import zaloLogo from './assets/images/Icon-Zalo-2021.png';
 import PhoneCall from './assets/images/phone-call.png';
 
 function App() {
+  const [showForm, setShowForm] = useState(true);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-white">
+      {/* Floating Form */}
+      {showForm && <FloatingForm closeForm={() => setShowForm(false)} />}
+
       {/* Fixed Header */}
       <Header />
 
@@ -34,9 +45,11 @@ function App() {
       {/* Main content cuộn đè lên QuoteComponent */}
       <div className="relative z-10 -mt-40 pt-20">
         <HeroSection />
+        <StatsSection />
         <FeatuaredProperties />
         <Swipper />
         <LegalSection />
+        <WhyChooseUs />
         <MapSlide />
         <Videos />
         <Footer />
@@ -77,3 +90,4 @@ function App() {
 }
 
 export default App;
+
